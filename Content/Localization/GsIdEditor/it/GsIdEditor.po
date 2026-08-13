@@ -1,0 +1,505 @@
+# GsIdEditor Italian translation.
+# Fill out your copyright notice in the Description page of Project Settings.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: GsIdEditor\n"
+"POT-Creation-Date: 2026-08-04 18:19\n"
+"PO-Revision-Date: 2026-08-04 18:19\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Key:	Function_UGsIdBlueprintLibrary_TryNewGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(103)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(103)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_TryNewGsId_DisplayName"
+msgid "Try New GsId"
+msgstr "Prova a creare un GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_TryNewGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(104)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(104)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_TryNewGsId_Keywords"
+msgid "try new gsid"
+msgstr "Prova a creare un GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_TryNewGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(105)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(105)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_TryNewGsId_ReturnDisplayName"
+msgid "Success"
+msgstr "Successo"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_TryNewGsId_OutGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(106)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(106)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_TryNewGsId_OutGsId_DisplayName"
+msgid "Generated GsId"
+msgstr ""
+
+#. Key:	Function_UGsIdBlueprintLibrary_EmptyGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(110)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(110)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EmptyGsId_DisplayName"
+msgid "Empty GsId"
+msgstr "GsId vuoto"
+
+#. Key:	Function_UGsIdBlueprintLibrary_EmptyGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(111)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(111)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EmptyGsId_Keywords"
+msgid "empty gsid gsid"
+msgstr "Vuoto gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_EmptyGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(112)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(112)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EmptyGsId_ReturnDisplayName"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsEmpty_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(116)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(116)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsEmpty_DisplayName"
+msgid "Is Empty"
+msgstr "È vuoto"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsEmpty_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(117)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(117)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsEmpty_Keywords"
+msgid "is empty gsid"
+msgstr "È Vuoto gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsEmpty_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(118)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(118)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsEmpty_ReturnDisplayName"
+msgid "Result"
+msgstr "Risultato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_IsEmpty_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(119)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(119)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_IsEmpty_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsValid_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(123)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(123)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsValid_DisplayName"
+msgid "Is Valid"
+msgstr "È valido"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsValid_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(124)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(124)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsValid_Keywords"
+msgid "is valid gsid"
+msgstr "È Valido gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_IsValid_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(125)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(125)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_IsValid_ReturnDisplayName"
+msgid "Result"
+msgstr "Risultato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_IsValid_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(126)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(126)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_IsValid_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(130)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(130)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_DisplayName"
+msgid "Equal (GsId)"
+msgstr "Uguale (GsId)"
+
+#. Key:	Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(131)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(131)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_Keywords"
+msgid "equal gsid gsid"
+msgstr "Uguale gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(132)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(132)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_ReturnDisplayName"
+msgid "Result"
+msgstr "Risultato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_A_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(133)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(133)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_A_DisplayName"
+msgid "A"
+msgstr "A"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_B_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(134)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(134)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_EqualEqual_GsIdGsId_B_DisplayName"
+msgid "B"
+msgstr "B"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(138)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(138)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_DisplayName"
+msgid "Not Equal (GsId)"
+msgstr "Diverso (GsId)"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(139)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(139)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_Keywords"
+msgid "not equal gsid gsid"
+msgstr "Non Uguale gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(140)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(140)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_ReturnDisplayName"
+msgid "Result"
+msgstr "Risultato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_A_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(141)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(141)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_A_DisplayName"
+msgid "A"
+msgstr "A"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_B_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(142)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(142)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_NotEqual_GsIdGsId_B_DisplayName"
+msgid "B"
+msgstr "B"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Less_GsIdGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(146)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(146)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Less_GsIdGsId_DisplayName"
+msgid "Less (GsId)"
+msgstr "Minore (GsId)"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Less_GsIdGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(147)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(147)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Less_GsIdGsId_Keywords"
+msgid "less gsid gsid"
+msgstr "Minore gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Less_GsIdGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(148)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(148)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Less_GsIdGsId_ReturnDisplayName"
+msgid "Result"
+msgstr "Risultato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_Less_GsIdGsId_A_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(149)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(149)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_Less_GsIdGsId_A_DisplayName"
+msgid "A"
+msgstr "A"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_Less_GsIdGsId_B_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(150)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(150)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_Less_GsIdGsId_B_DisplayName"
+msgid "B"
+msgstr "B"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToString_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(154)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(154)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToString_DisplayName"
+msgid "To String"
+msgstr "Converti in stringa"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToString_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(155)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(155)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToString_Keywords"
+msgid "to string gsid"
+msgstr "to stringa gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToString_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(156)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(156)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToString_ReturnDisplayName"
+msgid "Text"
+msgstr "Testo"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_ToString_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(157)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(157)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_ToString_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_ToString_Format_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(158)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(158)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_ToString_Format_DisplayName"
+msgid "Format"
+msgstr "formato"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_ToString_LetterCase_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(159)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(159)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_ToString_LetterCase_DisplayName"
+msgid "Letter Case"
+msgstr "Maiuscole/minuscole"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Parse_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(163)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(163)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Parse_DisplayName"
+msgid "Parse"
+msgstr "Analizza"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Parse_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(164)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(164)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Parse_Keywords"
+msgid "parse gsid"
+msgstr "Analizza gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_Parse_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(165)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(165)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_Parse_ReturnDisplayName"
+msgid "Success"
+msgstr "Successo"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_Parse_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(166)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(166)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_Parse_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_Parse_OutGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(167)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(167)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_Parse_OutGsId_DisplayName"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToBytes_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(171)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(171)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToBytes_DisplayName"
+msgid "To Bytes"
+msgstr "Converti in byte"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToBytes_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(172)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(172)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToBytes_Keywords"
+msgid "to bytes gsid"
+msgstr "to byte gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_ToBytes_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(173)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(173)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_ToBytes_ReturnDisplayName"
+msgid "Bytes"
+msgstr "byte"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_ToBytes_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(174)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(174)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_ToBytes_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Function_UGsIdBlueprintLibrary_FromBytes_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(178)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(178)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_FromBytes_DisplayName"
+msgid "From Bytes"
+msgstr "Crea da byte"
+
+#. Key:	Function_UGsIdBlueprintLibrary_FromBytes_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(179)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(179)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_FromBytes_Keywords"
+msgid "from bytes gsid"
+msgstr "from byte gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_FromBytes_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(180)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(180)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_FromBytes_ReturnDisplayName"
+msgid "Success"
+msgstr "Successo"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_FromBytes_Bytes_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(181)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(181)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_FromBytes_Bytes_DisplayName"
+msgid "Bytes"
+msgstr "byte"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_FromBytes_OutGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(182)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(182)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_FromBytes_OutGsId_DisplayName"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(186)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(186)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_DisplayName"
+msgid "Create Deterministic GsId"
+msgstr "Crea GsId deterministico"
+
+#. Key:	Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(187)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(187)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_Keywords"
+msgid "create deterministic gsid gsid"
+msgstr "Crea deterministico gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(188)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(188)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_CreateDeterministicGsId_ReturnDisplayName"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_CreateDeterministicGsId_InputBytes_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(189)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(189)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_CreateDeterministicGsId_InputBytes_DisplayName"
+msgid "Input Bytes"
+msgstr "Byte di input"
+
+#. Key:	Function_UGsIdBlueprintLibrary_GetStableHash_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(193)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(193)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_GetStableHash_DisplayName"
+msgid "Get Stable Hash"
+msgstr "Ottieni hash stabile"
+
+#. Key:	Function_UGsIdBlueprintLibrary_GetStableHash_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(194)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(194)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_GetStableHash_Keywords"
+msgid "get stable hash gsid"
+msgstr "Ottieni stabile hash gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_GetStableHash_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(195)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(195)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_GetStableHash_ReturnDisplayName"
+msgid "Stable Hash"
+msgstr "Hash stabile"
+
+#. Key:	Parameter_UGsIdBlueprintLibrary_GetStableHash_Value_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(196)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(196)
+msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_GetStableHash_Value_DisplayName"
+msgid "Value"
+msgstr "valore"
+
+#. Key:	Category_GsId_Galactic_Shrine_GsId
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(57)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(57)
+msgctxt "GsIdEditorLocalization,Category_GsId_Galactic_Shrine_GsId"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Type_EGsIdFormat_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(63)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(63)
+msgctxt "GsIdEditorLocalization,Type_EGsIdFormat_DisplayName"
+msgid "GsId Format"
+msgstr "Formato GsId"
+
+#. Key:	Enum_EGsIdFormat_N_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(66)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(66)
+msgctxt "GsIdEditorLocalization,Enum_EGsIdFormat_N_DisplayName"
+msgid "N — 64 hexadecimal characters"
+msgstr "N — 64 caratteri esadecimali"
+
+#. Key:	Enum_EGsIdFormat_D_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(70)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(70)
+msgctxt "GsIdEditorLocalization,Enum_EGsIdFormat_D_DisplayName"
+msgid "D — 16-8-8-8-8-16"
+msgstr "D — 16 - 8 - 8 - 8 - 8 - 16"
+
+#. Key:	Type_EGsIdLetterCase_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(76)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(76)
+msgctxt "GsIdEditorLocalization,Type_EGsIdLetterCase_DisplayName"
+msgid "GsId Letter Case"
+msgstr "Maiuscole/minuscole GsId"
+
+#. Key:	Enum_EGsIdLetterCase_Upper_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(79)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(79)
+msgctxt "GsIdEditorLocalization,Enum_EGsIdLetterCase_Upper_DisplayName"
+msgid "Uppercase"
+msgstr "Maiuscolo"
+
+#. Key:	Enum_EGsIdLetterCase_Lower_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(83)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(83)
+msgctxt "GsIdEditorLocalization,Enum_EGsIdLetterCase_Lower_DisplayName"
+msgid "Lowercase"
+msgstr "Minuscolo"
+
+#. Key:	Type_FGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(89)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(89)
+msgctxt "GsIdEditorLocalization,Type_FGsId_DisplayName"
+msgid "GsId"
+msgstr "GsId"
+
+#. Key:	Type_UGsIdBlueprintLibrary_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(94)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(94)
+msgctxt "GsIdEditorLocalization,Type_UGsIdBlueprintLibrary_DisplayName"
+msgid "GsId Blueprint Library"
+msgstr "Libreria Blueprint GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NewGsId_DisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(97)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(97)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NewGsId_DisplayName"
+msgid "New GsId"
+msgstr "Crea GsId"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NewGsId_Keywords
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(98)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(98)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NewGsId_Keywords"
+msgid "new gsid gsid"
+msgstr "new gsid gsid"
+
+#. Key:	Function_UGsIdBlueprintLibrary_NewGsId_ReturnDisplayName
+#. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(99)
+#: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(99)
+msgctxt "GsIdEditorLocalization,Function_UGsIdBlueprintLibrary_NewGsId_ReturnDisplayName"
+msgid "GsId"
+msgstr "GsId"
+

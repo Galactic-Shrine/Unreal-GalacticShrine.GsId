@@ -1,0 +1,293 @@
+name: Publish official plugin release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: VersionName to publish, without the v prefix
+        required: true
+        type: string
+      prerelease:
+        description: Mark the GitHub release as a prerelease
+        required: true
+        default: false
+        type: boolean
+      build_windows:
+        description: Build and publish Win64 on an available Windows runner
+        required: true
+        default: false
+        type: boolean
+      build_linux:
+        description: Build and publish Linux on an available Linux runner
+        required: true
+        default: false
+        type: boolean
+      build_mac:
+        description: Build and publish Mac on an available macOS runner
+        required: true
+        default: false
+        type: boolean
+      publish_remote:
+        description: Also mirror selected artifacts to the configured FTPS server
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: official-release-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Validate release request
+        shell: bash
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+          BUILD_WINDOWS: ${{ inputs.build_windows }}
+          BUILD_LINUX: ${{ inputs.build_linux }}
+          BUILD_MAC: ${{ inputs.build_mac }}
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_REF" == 'refs/heads/main' ]] || {
+            echo 'Official releases must be dispatched from the main branch.' >&2
+            exit 1
+          }
+          [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+([-+][0-9A-Za-z.-]+)?$ ]] || {
+            echo 'The release version is not valid semantic versioning.' >&2
+            exit 1
+          }
+          [[ "$BUILD_WINDOWS" == 'true' || "$BUILD_LINUX" == 'true' || "$BUILD_MAC" == 'true' ]] || {
+            echo 'Select at least one platform to publish.' >&2
+            exit 1
+          }
+          descriptor_version="$(python3 -c "import json; print(json.load(open('GsId.uplugin', encoding='utf-8-sig'))['VersionName'])")"
+          [[ "$descriptor_version" == "$RELEASE_VERSION" ]] || {
+            echo "Requested version $RELEASE_VERSION does not match GsId.uplugin $descriptor_version." >&2
+            exit 1
+          }
+          if git ls-remote --exit-code --tags origin "refs/tags/v$RELEASE_VERSION" >/dev/null 2>&1; then
+            echo "Tag v$RELEASE_VERSION already exists." >&2
+            exit 1
+          fi
+
+  build-windows:
+    needs: prepare
+    if: inputs.build_windows
+    runs-on: [self-hosted, windows, x64, unreal-5.8, official-release]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Win64 package
+        id: build
+        shell: pwsh
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_WINDOWS }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-windows
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:UE_ROOT)) { throw 'UE_ROOT_WINDOWS is not configured.' }
+          ./Scripts/Build-Plugin.ps1 `
+            -EngineRoot $env:UE_ROOT `
+            -OutputDirectory $env:BUILD_OUTPUT `
+            -TargetPlatform Win64 `
+            -ExpectedVersion $env:RELEASE_VERSION
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ inputs.version }}-Win64-release
+          path: |
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-windows/*.zip
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-windows/*.sha256
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-windows/*.build.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Clean temporary output
+        if: always()
+        shell: pwsh
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-windows
+        run: |
+          if (Test-Path -LiteralPath $env:BUILD_OUTPUT) {
+            Remove-Item -LiteralPath $env:BUILD_OUTPUT -Recurse -Force
+          }
+
+  build-linux:
+    needs: [prepare, build-windows]
+    if: ${{ !cancelled() && inputs.build_linux && needs.prepare.result == 'success' && (needs.build-windows.result == 'success' || needs.build-windows.result == 'skipped') }}
+    runs-on: [self-hosted, linux, x64, unreal-5.8, official-release]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Linux package
+        id: build
+        shell: bash
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_LINUX }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-linux
+        run: |
+          set -euo pipefail
+          [[ -n "$UE_ROOT" ]] || { echo 'UE_ROOT_LINUX is not configured.' >&2; exit 1; }
+          chmod +x Scripts/*.sh
+          ./Scripts/Build-Plugin.sh \
+            --engine-root "$UE_ROOT" \
+            --output "$BUILD_OUTPUT" \
+            --platform Linux \
+            --expected-version "$RELEASE_VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ inputs.version }}-Linux-release
+          path: |
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-linux/*.zip
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-linux/*.sha256
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-linux/*.build.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Clean temporary output
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-linux
+        run: rm -rf -- "$BUILD_OUTPUT"
+
+  build-mac:
+    needs: prepare
+    if: inputs.build_mac
+    runs-on: [self-hosted, macos, unreal-5.8, official-release]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Mac package
+        id: build
+        shell: bash
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_MAC }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-mac
+        run: |
+          set -euo pipefail
+          [[ -n "$UE_ROOT" ]] || { echo 'UE_ROOT_MAC is not configured.' >&2; exit 1; }
+          chmod +x Scripts/*.sh
+          ./Scripts/Build-Plugin.sh \
+            --engine-root "$UE_ROOT" \
+            --output "$BUILD_OUTPUT" \
+            --platform Mac \
+            --expected-version "$RELEASE_VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ inputs.version }}-Mac-release
+          path: |
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-mac/*.zip
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-mac/*.sha256
+            ${{ runner.temp }}/gsid-release-${{ github.run_id }}-mac/*.build.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Clean temporary output
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-release-${{ github.run_id }}-mac
+        run: rm -rf -- "$BUILD_OUTPUT"
+
+  publish:
+    needs: [prepare, build-windows, build-linux, build-mac]
+    if: ${{ !cancelled() && needs.prepare.result == 'success' && (needs.build-windows.result == 'success' || needs.build-windows.result == 'skipped') && (needs.build-linux.result == 'success' || needs.build-linux.result == 'skipped') && (needs.build-mac.result == 'success' || needs.build-mac.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    environment: official-release
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_VERSION: ${{ inputs.version }}
+      PRERELEASE: ${{ inputs.prerelease }}
+      BUILD_WINDOWS: ${{ inputs.build_windows }}
+      BUILD_LINUX: ${{ inputs.build_linux }}
+      BUILD_MAC: ${{ inputs.build_mac }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: GsId-${{ inputs.version }}-*-release
+          path: release-assets
+          merge-multiple: true
+      - name: Verify release assets and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected=0
+          for selected in "$BUILD_WINDOWS" "$BUILD_LINUX" "$BUILD_MAC"; do
+            [[ "$selected" != 'true' ]] || expected=$((expected + 1))
+          done
+          mapfile -t checksums < <(find release-assets -maxdepth 1 -name '*.sha256' -type f | sort)
+          [[ "${#checksums[@]}" -eq "$expected" ]] || {
+            echo "Expected $expected checksum files, found ${#checksums[@]}." >&2
+            exit 1
+          }
+          for checksum in "${checksums[@]}"; do
+            (cd release-assets && sha256sum --check "$(basename "$checksum")")
+          done
+          if git ls-remote --exit-code --tags origin "refs/tags/v$RELEASE_VERSION" >/dev/null 2>&1; then
+            echo "Tag v$RELEASE_VERSION already exists." >&2
+            exit 1
+          fi
+      - name: Create tag and GitHub release
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          assets=(release-assets/*.zip release-assets/*.sha256 release-assets/*.build.json)
+          expected=0
+          for selected in "$BUILD_WINDOWS" "$BUILD_LINUX" "$BUILD_MAC"; do
+            [[ "$selected" != 'true' ]] || expected=$((expected + 3))
+          done
+          [[ "${#assets[@]}" -eq "$expected" ]] || {
+            echo "Expected $expected release assets, found ${#assets[@]}." >&2
+            exit 1
+          }
+          args=("v$RELEASE_VERSION" --target "$GITHUB_SHA" --title "GsId $RELEASE_VERSION" --generate-notes)
+          [[ "$PRERELEASE" != 'true' ]] || args+=(--prerelease)
+          gh release create "${args[@]}" "${assets[@]}"
+
+  mirror-remote:
+    needs: publish
+    if: inputs.publish_remote && needs.publish.result == 'success'
+    runs-on: [self-hosted, linux, x64, remote-ftps]
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      RELEASE_VERSION: ${{ inputs.version }}
+      REMOTE_FTPS_HOST: ${{ vars.REMOTE_FTPS_HOST }}
+      REMOTE_FTPS_PORT: ${{ vars.REMOTE_FTPS_PORT }}
+      REMOTE_FTPS_BASE_PATH: ${{ vars.REMOTE_FTPS_BASE_PATH }}
+      REMOTE_FTPS_USER: ${{ secrets.REMOTE_FTPS_USER }}
+      REMOTE_FTPS_PASSWORD: ${{ secrets.REMOTE_FTPS_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: GsId-${{ inputs.version }}-*-release
+          path: release-assets
+          merge-multiple: true
+      - name: Mirror release assets to FTPS
+        shell: bash
+        run: |
+          bash Scripts/Upload-Artifacts-Ftps.sh \
+            --plugin GsId \
+            --version "$RELEASE_VERSION" \
+            --source release-assets

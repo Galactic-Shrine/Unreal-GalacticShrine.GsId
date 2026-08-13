@@ -1,0 +1,5 @@
+self-hosted-runner:
+  labels:
+    - unreal-5.8
+    - official-release
+    - remote-ftps

@@ -1,0 +1,143 @@
+name: Build plugin on a personal runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: Personal runner platform
+        required: true
+        type: choice
+        options:
+          - Windows
+          - Linux
+          - Mac
+      expected_version:
+        description: Optional version that must match GsId.uplugin
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    if: inputs.platform == 'Windows'
+    runs-on: [self-hosted, windows, x64, unreal-5.8]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Win64 package
+        id: build
+        shell: pwsh
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_WINDOWS }}
+          EXPECTED_VERSION: ${{ inputs.expected_version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-windows
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:UE_ROOT)) {
+            throw 'Set the UE_ROOT_WINDOWS repository variable in this fork.'
+          }
+          ./Scripts/Build-Plugin.ps1 `
+            -EngineRoot $env:UE_ROOT `
+            -OutputDirectory $env:BUILD_OUTPUT `
+            -TargetPlatform Win64 `
+            -ExpectedVersion $env:EXPECTED_VERSION
+      - name: Upload compiled plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ steps.build.outputs.version }}-${{ steps.build.outputs.platform }}
+          path: |
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-windows/*.zip
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-windows/*.sha256
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-windows/*.build.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Clean temporary output
+        if: always()
+        shell: pwsh
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-windows
+        run: |
+          if (Test-Path -LiteralPath $env:BUILD_OUTPUT) {
+            Remove-Item -LiteralPath $env:BUILD_OUTPUT -Recurse -Force
+          }
+
+  build-linux:
+    if: inputs.platform == 'Linux'
+    runs-on: [self-hosted, linux, x64, unreal-5.8]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Linux package
+        id: build
+        shell: bash
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_LINUX }}
+          EXPECTED_VERSION: ${{ inputs.expected_version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-linux
+        run: |
+          set -euo pipefail
+          [[ -n "$UE_ROOT" ]] || { echo 'Set the UE_ROOT_LINUX repository variable in this fork.' >&2; exit 1; }
+          chmod +x Scripts/*.sh
+          args=(--engine-root "$UE_ROOT" --output "$BUILD_OUTPUT" --platform Linux)
+          [[ -z "$EXPECTED_VERSION" ]] || args+=(--expected-version "$EXPECTED_VERSION")
+          ./Scripts/Build-Plugin.sh "${args[@]}"
+      - name: Upload compiled plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ steps.build.outputs.version }}-${{ steps.build.outputs.platform }}
+          path: |
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-linux/*.zip
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-linux/*.sha256
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-linux/*.build.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Clean temporary output
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-linux
+        run: rm -rf -- "$BUILD_OUTPUT"
+
+  build-mac:
+    if: inputs.platform == 'Mac'
+    runs-on: [self-hosted, macos, unreal-5.8]
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          clean: true
+      - name: Build Mac package
+        id: build
+        shell: bash
+        env:
+          UE_ROOT: ${{ vars.UE_ROOT_MAC }}
+          EXPECTED_VERSION: ${{ inputs.expected_version }}
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-mac
+        run: |
+          set -euo pipefail
+          [[ -n "$UE_ROOT" ]] || { echo 'Set the UE_ROOT_MAC repository variable in this fork.' >&2; exit 1; }
+          chmod +x Scripts/*.sh
+          args=(--engine-root "$UE_ROOT" --output "$BUILD_OUTPUT" --platform Mac)
+          [[ -z "$EXPECTED_VERSION" ]] || args+=(--expected-version "$EXPECTED_VERSION")
+          ./Scripts/Build-Plugin.sh "${args[@]}"
+      - name: Upload compiled plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: GsId-${{ steps.build.outputs.version }}-${{ steps.build.outputs.platform }}
+          path: |
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-mac/*.zip
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-mac/*.sha256
+            ${{ runner.temp }}/gsid-${{ github.run_id }}-mac/*.build.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Clean temporary output
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTPUT: ${{ runner.temp }}/gsid-${{ github.run_id }}-mac
+        run: rm -rf -- "$BUILD_OUTPUT"

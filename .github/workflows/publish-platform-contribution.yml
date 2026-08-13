@@ -1,0 +1,128 @@
+name: Add contributed build to an existing release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - PlatformBuilds/**/*.json
+  workflow_dispatch:
+    inputs:
+      manifest_path:
+        description: PlatformBuilds manifest path to publish or retry
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: platform-contribution-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: official-release
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PLATFORM_ASSET_TOKEN: ${{ secrets.PLATFORM_ASSET_TOKEN }}
+      BEFORE_SHA: ${{ github.event.before }}
+      CURRENT_SHA: ${{ github.sha }}
+      MANUAL_MANIFEST: ${{ inputs.manifest_path }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Validate and attach contributed builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$GITHUB_EVENT_NAME" == 'workflow_dispatch' ]]; then
+            manifests=("$MANUAL_MANIFEST")
+          else
+            mapfile -t manifests < <(
+              git diff --name-only --diff-filter=AM "$BEFORE_SHA" "$CURRENT_SHA" -- PlatformBuilds \
+                | grep -E '^PlatformBuilds/.+\.json$' || true
+            )
+          fi
+          [[ "${#manifests[@]}" -gt 0 ]] || { echo 'No platform manifest found.' >&2; exit 1; }
+          index=0
+          for manifest in "${manifests[@]}"; do
+            [[ "$manifest" =~ ^PlatformBuilds/[A-Za-z0-9._/-]+\.json$ && "$manifest" != *../* && -f "$manifest" ]] || {
+              echo "Invalid manifest path: $manifest" >&2
+              exit 1
+            }
+            index=$((index + 1))
+            output="$RUNNER_TEMP/contribution-$index"
+            mkdir -p "$output"
+            result="$output/github-output.txt"
+            python3 Scripts/Validate-PlatformContribution.py \
+              --manifest "$manifest" \
+              --plugin GsId \
+              --repository-root . \
+              --output "$output" \
+              --github-output "$result"
+            version="$(grep '^version=' "$result" | cut -d= -f2-)"
+            platform="$(grep '^platform=' "$result" | cut -d= -f2-)"
+            tag="v$version"
+            gh release view "$tag" >/dev/null
+            for asset in \
+              "$output/GsId-$version-$platform.zip" \
+              "$output/GsId-$version-$platform.zip.sha256" \
+              "$output/GsId-$version-$platform.build.json"; do
+              if gh release view "$tag" --json assets --jq '.assets[].name' \
+                | grep -Fxq "$(basename "$asset")"; then
+                echo "Release asset already exists and will not be replaced: $(basename "$asset")" >&2
+                exit 1
+              fi
+            done
+            gh release upload "$tag" \
+              "$output/GsId-$version-$platform.zip" \
+              "$output/GsId-$version-$platform.zip.sha256" \
+              "$output/GsId-$version-$platform.build.json"
+          done
+      - name: Preserve contributed assets for the optional FTPS mirror
+        if: vars.REMOTE_ARTIFACTS_ENABLED == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: contributed-platform-assets-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/contribution-*/*.zip
+            ${{ runner.temp }}/contribution-*/*.zip.sha256
+            ${{ runner.temp }}/contribution-*/*.build.json
+          if-no-files-found: error
+          retention-days: 1
+
+  mirror-remote:
+    needs: publish
+    if: vars.REMOTE_ARTIFACTS_ENABLED == 'true' && needs.publish.result == 'success'
+    runs-on: [self-hosted, linux, x64, remote-ftps]
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    env:
+      REMOTE_FTPS_HOST: ${{ vars.REMOTE_FTPS_HOST }}
+      REMOTE_FTPS_PORT: ${{ vars.REMOTE_FTPS_PORT }}
+      REMOTE_FTPS_BASE_PATH: ${{ vars.REMOTE_FTPS_BASE_PATH }}
+      REMOTE_FTPS_USER: ${{ secrets.REMOTE_FTPS_USER }}
+      REMOTE_FTPS_PASSWORD: ${{ secrets.REMOTE_FTPS_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
+        with:
+          name: contributed-platform-assets-${{ github.run_id }}
+          path: contributed-assets
+      - name: Mirror contributed assets to FTPS
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' metadata < <(find contributed-assets -name '*.build.json' -type f -print0)
+          [[ "${#metadata[@]}" -gt 0 ]] || { echo 'No contributed build metadata found.' >&2; exit 1; }
+          for build_metadata in "${metadata[@]}"; do
+            version="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8-sig"))["pluginVersion"])' "$build_metadata")"
+            bash Scripts/Upload-Artifacts-Ftps.sh \
+              --plugin GsId \
+              --version "$version" \
+              --source "$(dirname "$build_metadata")"
+          done

@@ -1,0 +1,44 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "GsId",
+  "Description": "256-bit Galactic-Shrine identifiers, Blueprint, text/binary serialization, replication, deterministic generation.",
+  "Category": "Galactic-Shrine",
+  "CreatedBy": "Galactic-Shrine",
+  "CreatedByURL": "https://www.galactic-shrine.com",
+  "DocsURL": "https://docs.galactic-shrine.com/",
+  "SupportURL": "https://www.galactic-shrine.com",
+  "MarketplaceURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "IsExperimentalVersion": false,
+  "Installed": false,
+  "SupportedTargetPlatforms": [
+    "Win64",
+    "Linux",
+    "Mac"
+  ],
+  "Modules": [
+    {
+      "Name": "GsId",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "GsIdEditor",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit"
+    }
+  ],
+  "LocalizationTargets": [
+    {
+      "Name": "GsId",
+      "LoadingPolicy": "Always"
+    },
+    {
+      "Name": "GsIdEditor",
+      "LoadingPolicy": "Editor"
+    }
+  ]
+}

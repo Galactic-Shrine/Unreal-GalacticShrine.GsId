@@ -1,0 +1,31 @@
+# Unreal Engine generated files
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+
+# IDE and local build state
+.vs/
+.vscode/
+*.sln
+*.slnx
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*.user
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python validation cache
+__pycache__/
+*.py[cod]
+
+# Release packages
+*.zip
+*.7z
+
+# Documentation is published separately
+Documentation/

@@ -1,0 +1,49 @@
+name: Mirror an existing release to FTPS
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Existing VersionName to mirror, without the v prefix
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ftps-mirror-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: [self-hosted, linux, x64, remote-ftps]
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_VERSION: ${{ inputs.version }}
+      REMOTE_FTPS_HOST: ${{ vars.REMOTE_FTPS_HOST }}
+      REMOTE_FTPS_PORT: ${{ vars.REMOTE_FTPS_PORT }}
+      REMOTE_FTPS_BASE_PATH: ${{ vars.REMOTE_FTPS_BASE_PATH }}
+      REMOTE_FTPS_USER: ${{ secrets.REMOTE_FTPS_USER }}
+      REMOTE_FTPS_PASSWORD: ${{ secrets.REMOTE_FTPS_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Download and mirror the existing release
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_REF" == 'refs/heads/main' ]] || { echo 'Run this workflow from main.' >&2; exit 1; }
+          [[ "$RELEASE_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+([-+][0-9A-Za-z.-]+)?$ ]] || {
+            echo 'The release version is not valid semantic versioning.' >&2
+            exit 1
+          }
+          output="$RUNNER_TEMP/release-assets"
+          mkdir -p "$output"
+          gh release download "v$RELEASE_VERSION" \
+            --pattern "GsId-$RELEASE_VERSION-*" \
+            --dir "$output"
+          bash Scripts/Upload-Artifacts-Ftps.sh \
+            --plugin GsId \
+            --version "$RELEASE_VERSION" \
+            --source "$output"

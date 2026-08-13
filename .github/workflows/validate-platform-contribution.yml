@@ -1,0 +1,56 @@
+name: Validate contributed platform build
+
+on:
+  pull_request:
+    paths:
+      - PlatformBuilds/**/*.json
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out trusted validator
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+          path: trusted
+      - name: Check out contribution
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 1
+          persist-credentials: false
+          path: contribution
+      - name: Validate contributed archives
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PLATFORM_ASSET_TOKEN: ${{ secrets.PLATFORM_ASSET_TOKEN }}
+        run: |
+          set -euo pipefail
+          git -C trusted fetch --no-tags origin \
+            "refs/pull/$PR_NUMBER/head:refs/remotes/pull/contribution"
+          [[ "$(git -C trusted rev-parse refs/remotes/pull/contribution)" == "$HEAD_SHA" ]] || {
+            echo 'The pull request changed while validation was starting; rerun the check.' >&2
+            exit 1
+          }
+          mapfile -t manifests < <(
+            git -C trusted diff --name-only --diff-filter=AM \
+              "$BASE_SHA...refs/remotes/pull/contribution" -- PlatformBuilds \
+              | grep -E '^PlatformBuilds/.+\.json$' || true
+          )
+          [[ "${#manifests[@]}" -gt 0 ]] || { echo 'No added or modified platform manifest found.' >&2; exit 1; }
+          for manifest in "${manifests[@]}"; do
+            python3 trusted/Scripts/Validate-PlatformContribution.py \
+              --manifest "contribution/$manifest" \
+              --plugin GsId \
+              --repository-root trusted \
+              --output "$RUNNER_TEMP/validated"
+          done

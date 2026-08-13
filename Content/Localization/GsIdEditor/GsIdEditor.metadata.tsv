@@ -1,0 +1,638 @@
+# culture	source	translation
+ar	A	A
+ar	B	B
+ar	Bytes	بايت
+ar	Create Deterministic GsId	إنشاء GsId حتمي
+ar	create deterministic gsid gsid	إنشاء حتمي gsid gsid
+ar	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+ar	Empty GsId	GsId فارغ
+ar	empty gsid gsid	فارغ gsid gsid
+ar	Equal (GsId)	يساوي (GsId)
+ar	equal gsid gsid	يساوي gsid gsid
+ar	Format	تنسيق
+ar	From Bytes	إنشاء من بايتات
+ar	from bytes gsid	from بايت gsid
+ar	Get Stable Hash	الحصول على تجزئة ثابتة
+ar	get stable hash gsid	الحصول على ثابت تجزئة gsid
+ar	GSID	GSID
+ar	GsId	GsId
+ar	GsId Blueprint Library	مكتبة Blueprint لـ GsId
+ar	GsId Format	تنسيق GsId
+ar	GsId Letter Case	حالة أحرف GsId
+ar	Input Bytes	بايتات الإدخال
+ar	Is Empty	هل هو فارغ
+ar	is empty gsid	هل فارغ gsid
+ar	Is Valid	هل هو صالح
+ar	is valid gsid	هل صالح gsid
+ar	Less (GsId)	أقل (GsId)
+ar	less gsid gsid	أقل gsid gsid
+ar	Letter Case	حالة الأحرف
+ar	Lowercase	أحرف صغيرة
+ar	N — 64 hexadecimal characters	N — 64 حرفًا سداسيًا عشريًا
+ar	New GsId	إنشاء GsId
+ar	new gsid gsid	new gsid gsid
+ar	Not Equal (GsId)	لا يساوي (GsId)
+ar	not equal gsid gsid	غير يساوي gsid gsid
+ar	Out Gs Id	GsId المُنشأ
+ar	Parse	تحليل
+ar	parse gsid	تحليل gsid
+ar	Result	النتيجة
+ar	Stable Hash	تجزئة ثابتة
+ar	Success	نجاح
+ar	Text	نص
+ar	To Bytes	تحويل إلى بايتات
+ar	to bytes gsid	to بايت gsid
+ar	To String	تحويل إلى سلسلة
+ar	to string gsid	to سلسلة gsid
+ar	Try New GsId	محاولة إنشاء GsId
+ar	try new gsid gsid	محاولة إنشاء gsid
+ar	Uppercase	أحرف كبيرة
+ar	Value	قيمة
+de	A	A
+de	B	B
+de	Bytes	Bytes
+de	Create Deterministic GsId	Deterministische GsId erstellen
+de	create deterministic gsid gsid	Erstellen Deterministisch gsid gsid
+de	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+de	Empty GsId	Leere GsId
+de	empty gsid gsid	Leer gsid gsid
+de	Equal (GsId)	Gleich (GsId)
+de	equal gsid gsid	Gleich gsid gsid
+de	Format	Format
+de	From Bytes	Aus Bytes erstellen
+de	from bytes gsid	from Bytes gsid
+de	Get Stable Hash	Stabilen Hash abrufen
+de	get stable hash gsid	Abrufen Stabil Hash gsid
+de	GSID	GSID
+de	GsId	GsId
+de	GsId Blueprint Library	GsId-Blueprint-Bibliothek
+de	GsId Format	GsId-Format
+de	GsId Letter Case	GsId-Groß-/Kleinschreibung
+de	Input Bytes	Eingabebytes
+de	Is Empty	Ist leer
+de	is empty gsid	Ist Leer gsid
+de	Is Valid	Ist gültig
+de	is valid gsid	Ist Gültig gsid
+de	Less (GsId)	Kleiner (GsId)
+de	less gsid gsid	Kleiner gsid gsid
+de	Letter Case	Groß-/Kleinschreibung
+de	Lowercase	Kleinbuchstaben
+de	N — 64 hexadecimal characters	N — 64 Hexadezimalzeichen
+de	New GsId	Neue GsId
+de	new gsid gsid	new gsid gsid
+de	Not Equal (GsId)	Ungleich (GsId)
+de	not equal gsid gsid	Nicht Gleich gsid gsid
+de	Out Gs Id	Erzeugte GsId
+de	Parse	Parsen
+de	parse gsid	Parsen gsid
+de	Result	Ergebnis
+de	Stable Hash	Stabiler Hash
+de	Success	Erfolg
+de	Text	Text
+de	To Bytes	In Bytes umwandeln
+de	to bytes gsid	to Bytes gsid
+de	To String	In Zeichenfolge umwandeln
+de	to string gsid	to Zeichenfolge gsid
+de	Try New GsId	GsId-Erstellung versuchen
+de	try new gsid gsid	gsid-erstellung versuchen
+de	Uppercase	Großbuchstaben
+de	Value	Wert
+en	A	A
+en	B	B
+en	Bytes	Bytes
+en	Create Deterministic GsId	Create Deterministic GsId
+en	create deterministic gsid gsid	create deterministic gsid gsid
+en	D — 16-8-8-8-8-16	D — 16-8-8-8-8-16
+en	Empty GsId	Empty GsId
+en	empty gsid gsid	empty gsid gsid
+en	Equal (GsId)	Equal (GsId)
+en	equal gsid gsid	equal gsid gsid
+en	Format	Format
+en	From Bytes	From Bytes
+en	from bytes gsid	from bytes gsid
+en	Get Stable Hash	Get Stable Hash
+en	get stable hash gsid	get stable hash gsid
+en	GSID	GSID
+en	GsId	GsId
+en	GsId Blueprint Library	GsId Blueprint Library
+en	GsId Format	GsId Format
+en	GsId Letter Case	GsId Letter Case
+en	Input Bytes	Input Bytes
+en	Is Empty	Is Empty
+en	is empty gsid	is empty gsid
+en	Is Valid	Is Valid
+en	is valid gsid	is valid gsid
+en	Less (GsId)	Less (GsId)
+en	less gsid gsid	less gsid gsid
+en	Letter Case	Letter Case
+en	Lowercase	Lowercase
+en	N — 64 hexadecimal characters	N — 64 hexadecimal characters
+en	New GsId	New GsId
+en	new gsid gsid	new gsid gsid
+en	Not Equal (GsId)	Not Equal (GsId)
+en	not equal gsid gsid	not equal gsid gsid
+en	Out Gs Id	Generated GsId
+en	Parse	Parse
+en	parse gsid	parse gsid
+en	Result	Result
+en	Stable Hash	Stable Hash
+en	Success	Success
+en	Text	Text
+en	To Bytes	To Bytes
+en	to bytes gsid	to bytes gsid
+en	To String	To String
+en	to string gsid	to string gsid
+en	Try New GsId	Try New GsId
+en	try new gsid gsid	try new gsid
+en	Uppercase	Uppercase
+en	Value	Value
+es	A	A
+es	B	B
+es	Bytes	bytes
+es	Create Deterministic GsId	Crear GsId determinista
+es	create deterministic gsid gsid	Crear determinista gsid gsid
+es	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+es	Empty GsId	GsId vacío
+es	empty gsid gsid	Vacío gsid gsid
+es	Equal (GsId)	Igual (GsId)
+es	equal gsid gsid	Igual gsid gsid
+es	Format	formato
+es	From Bytes	Crear desde bytes
+es	from bytes gsid	from bytes gsid
+es	Get Stable Hash	Obtener hash estable
+es	get stable hash gsid	Obtener estable hash gsid
+es	GSID	GSID
+es	GsId	GsId
+es	GsId Blueprint Library	Biblioteca Blueprint de GsId
+es	GsId Format	Formato GsId
+es	GsId Letter Case	Mayúsculas/minúsculas de GsId
+es	Input Bytes	Bytes de entrada
+es	Is Empty	Está vacío
+es	is empty gsid	Es Vacío gsid
+es	Is Valid	Es válido
+es	is valid gsid	Es Válido gsid
+es	Less (GsId)	Menor (GsId)
+es	less gsid gsid	Menor gsid gsid
+es	Letter Case	Mayúsculas/minúsculas
+es	Lowercase	Minúsculas
+es	N — 64 hexadecimal characters	N — 64 caracteres hexadecimales
+es	New GsId	Crear GsId
+es	new gsid gsid	new gsid gsid
+es	Not Equal (GsId)	Distinto (GsId)
+es	not equal gsid gsid	No Igual gsid gsid
+es	Out Gs Id	GsId generado
+es	Parse	Analizar
+es	parse gsid	Analizar gsid
+es	Result	Resultado
+es	Stable Hash	Hash estable
+es	Success	Éxito
+es	Text	Texto
+es	To Bytes	Convertir a bytes
+es	to bytes gsid	to bytes gsid
+es	To String	Convertir a cadena
+es	to string gsid	to cadena gsid
+es	Try New GsId	Intentar crear un GsId
+es	try new gsid gsid	intentar crear un gsid
+es	Uppercase	Mayúsculas
+es	Value	valor
+fr	A	A
+fr	B	B
+fr	Bytes	Octets
+fr	Create Deterministic GsId	Créer un GsId déterministe
+fr	create deterministic gsid gsid	créer déterministe gsid gsid
+fr	D — 16-8-8-8-8-16	D — 16-8-8-8-8-16
+fr	Empty GsId	GsId vide
+fr	empty gsid gsid	vide gsid gsid
+fr	Equal (GsId)	Égal (GsId)
+fr	equal gsid gsid	égal gsid gsid
+fr	Format	format
+fr	From Bytes	Créer depuis des octets
+fr	from bytes gsid	depuis octets gsid
+fr	Get Stable Hash	Obtenir le hachage stable
+fr	get stable hash gsid	obtenir stable hachage gsid
+fr	GSID	GSID
+fr	GsId	GsId
+fr	GsId Blueprint Library	Bibliothèque Blueprint GsId
+fr	GsId Format	Format GsId
+fr	GsId Letter Case	Casse des lettres GsId
+fr	Input Bytes	Octets d’entrée
+fr	Is Empty	Est vide
+fr	is empty gsid	est vide gsid
+fr	Is Valid	Est valide
+fr	is valid gsid	est valide gsid
+fr	Less (GsId)	Inférieur (GsId)
+fr	less gsid gsid	inférieur gsid gsid
+fr	Letter Case	Casse des lettres
+fr	Lowercase	Minuscules
+fr	N — 64 hexadecimal characters	N — 64 caractères hexadécimaux
+fr	New GsId	Créer un GsId
+fr	new gsid gsid	new gsid gsid
+fr	Not Equal (GsId)	Différent (GsId)
+fr	not equal gsid gsid	non égal gsid gsid
+fr	Out Gs Id	GsId généré
+fr	Parse	Analyser
+fr	parse gsid	analyser gsid
+fr	Result	Résultat
+fr	Stable Hash	Hachage stable
+fr	Success	Succès
+fr	Text	Texte
+fr	To Bytes	Convertir en octets
+fr	to bytes gsid	vers octets gsid
+fr	To String	Convertir en chaîne
+fr	to string gsid	vers chaîne gsid
+fr	Try New GsId	Essayer de créer un GsId
+fr	try new gsid gsid	essayer de créer un gsid
+fr	Uppercase	Majuscules
+fr	Value	valeur
+it	A	A
+it	B	B
+it	Bytes	byte
+it	Create Deterministic GsId	Crea GsId deterministico
+it	create deterministic gsid gsid	Crea deterministico gsid gsid
+it	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+it	Empty GsId	GsId vuoto
+it	empty gsid gsid	Vuoto gsid gsid
+it	Equal (GsId)	Uguale (GsId)
+it	equal gsid gsid	Uguale gsid gsid
+it	Format	formato
+it	From Bytes	Crea da byte
+it	from bytes gsid	from byte gsid
+it	Get Stable Hash	Ottieni hash stabile
+it	get stable hash gsid	Ottieni stabile hash gsid
+it	GSID	GSID
+it	GsId	GsId
+it	GsId Blueprint Library	Libreria Blueprint GsId
+it	GsId Format	Formato GsId
+it	GsId Letter Case	Maiuscole/minuscole GsId
+it	Input Bytes	Byte di input
+it	Is Empty	È vuoto
+it	is empty gsid	È Vuoto gsid
+it	Is Valid	È valido
+it	is valid gsid	È Valido gsid
+it	Less (GsId)	Minore (GsId)
+it	less gsid gsid	Minore gsid gsid
+it	Letter Case	Maiuscole/minuscole
+it	Lowercase	Minuscolo
+it	N — 64 hexadecimal characters	N — 64 caratteri esadecimali
+it	New GsId	Crea GsId
+it	new gsid gsid	new gsid gsid
+it	Not Equal (GsId)	Diverso (GsId)
+it	not equal gsid gsid	Non Uguale gsid gsid
+it	Out Gs Id	GsId generato
+it	Parse	Analizza
+it	parse gsid	Analizza gsid
+it	Result	Risultato
+it	Stable Hash	Hash stabile
+it	Success	Successo
+it	Text	Testo
+it	To Bytes	Converti in byte
+it	to bytes gsid	to byte gsid
+it	To String	Converti in stringa
+it	to string gsid	to stringa gsid
+it	Try New GsId	Prova a creare un GsId
+it	try new gsid gsid	prova a creare un gsid
+it	Uppercase	Maiuscolo
+it	Value	valore
+ja	A	A
+ja	B	B
+ja	Bytes	バイト
+ja	Create Deterministic GsId	決定論的 GsId を作成
+ja	create deterministic gsid gsid	作成決定論的 gsid gsid
+ja	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+ja	Empty GsId	空の GsId
+ja	empty gsid gsid	空 gsid gsid
+ja	Equal (GsId)	等しい (GsId)
+ja	equal gsid gsid	等しい gsid gsid
+ja	Format	形式
+ja	From Bytes	バイトから作成
+ja	from bytes gsid	from バイト gsid
+ja	Get Stable Hash	安定ハッシュを取得
+ja	get stable hash gsid	取得安定ハッシュ gsid
+ja	GSID	GSID
+ja	GsId	GsId
+ja	GsId Blueprint Library	GsId Blueprint ライブラリ
+ja	GsId Format	GsId 形式
+ja	GsId Letter Case	GsId 文字種
+ja	Input Bytes	入力バイト
+ja	Is Empty	空か
+ja	is empty gsid	判定空 gsid
+ja	Is Valid	有効か
+ja	is valid gsid	判定有効 gsid
+ja	Less (GsId)	小さい (GsId)
+ja	less gsid gsid	小さい gsid gsid
+ja	Letter Case	大文字/小文字
+ja	Lowercase	小文字
+ja	N — 64 hexadecimal characters	N — 64 桁の16進文字
+ja	New GsId	新しい GsId
+ja	new gsid gsid	new gsid gsid
+ja	Not Equal (GsId)	等しくない (GsId)
+ja	not equal gsid gsid	非等しい gsid gsid
+ja	Out Gs Id	生成された GsId
+ja	Parse	解析
+ja	parse gsid	解析 gsid
+ja	Result	結果
+ja	Stable Hash	安定ハッシュ
+ja	Success	成功
+ja	Text	テキスト
+ja	To Bytes	バイトへ変換
+ja	to bytes gsid	to バイト gsid
+ja	To String	文字列へ変換
+ja	to string gsid	to 文字列 gsid
+ja	Try New GsId	GsId の作成を試行
+ja	try new gsid gsid	gsid の作成を試行
+ja	Uppercase	大文字
+ja	Value	値
+ko	A	A
+ko	B	B
+ko	Bytes	바이트
+ko	Create Deterministic GsId	결정론적 GsId 생성
+ko	create deterministic gsid gsid	생성결정론적 gsid gsid
+ko	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+ko	Empty GsId	빈 GsId
+ko	empty gsid gsid	비어있음 gsid gsid
+ko	Equal (GsId)	같음 (GsId)
+ko	equal gsid gsid	같음 gsid gsid
+ko	Format	형식
+ko	From Bytes	바이트에서 생성
+ko	from bytes gsid	from 바이트 gsid
+ko	Get Stable Hash	안정 해시 가져오기
+ko	get stable hash gsid	가져오기안정해시 gsid
+ko	GSID	GSID
+ko	GsId	GsId
+ko	GsId Blueprint Library	GsId Blueprint 라이브러리
+ko	GsId Format	GsId 형식
+ko	GsId Letter Case	GsId 대소문자
+ko	Input Bytes	입력 바이트
+ko	Is Empty	비어 있음
+ko	is empty gsid	여부비어있음 gsid
+ko	Is Valid	유효함
+ko	is valid gsid	여부유효 gsid
+ko	Less (GsId)	작음 (GsId)
+ko	less gsid gsid	작음 gsid gsid
+ko	Letter Case	대소문자
+ko	Lowercase	소문자
+ko	N — 64 hexadecimal characters	N — 64자 16진수
+ko	New GsId	새 GsId
+ko	new gsid gsid	new gsid gsid
+ko	Not Equal (GsId)	같지 않음 (GsId)
+ko	not equal gsid gsid	아님같음 gsid gsid
+ko	Out Gs Id	생성된 GsId
+ko	Parse	구문 분석
+ko	parse gsid	구문분석 gsid
+ko	Result	결과
+ko	Stable Hash	안정 해시
+ko	Success	성공
+ko	Text	텍스트
+ko	To Bytes	바이트로 변환
+ko	to bytes gsid	to 바이트 gsid
+ko	To String	문자열로 변환
+ko	to string gsid	to 문자열 gsid
+ko	Try New GsId	GsId 생성 시도
+ko	try new gsid gsid	gsid 생성 시도
+ko	Uppercase	대문자
+ko	Value	값
+pt	A	A
+pt	B	B
+pt	Bytes	bytes
+pt	Create Deterministic GsId	Criar GsId determinístico
+pt	create deterministic gsid gsid	Criar determinístico gsid gsid
+pt	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+pt	Empty GsId	GsId vazio
+pt	empty gsid gsid	Vazio gsid gsid
+pt	Equal (GsId)	Igual (GsId)
+pt	equal gsid gsid	Igual gsid gsid
+pt	Format	formato
+pt	From Bytes	Criar a partir de bytes
+pt	from bytes gsid	from bytes gsid
+pt	Get Stable Hash	Obter hash estável
+pt	get stable hash gsid	Obter estável hash gsid
+pt	GSID	GSID
+pt	GsId	GsId
+pt	GsId Blueprint Library	Biblioteca Blueprint GsId
+pt	GsId Format	Formato GsId
+pt	GsId Letter Case	Maiúsculas/minúsculas do GsId
+pt	Input Bytes	Bytes de entrada
+pt	Is Empty	Está vazio
+pt	is empty gsid	É Vazio gsid
+pt	Is Valid	É válido
+pt	is valid gsid	É Válido gsid
+pt	Less (GsId)	Menor (GsId)
+pt	less gsid gsid	Menor gsid gsid
+pt	Letter Case	Maiúsculas/minúsculas
+pt	Lowercase	Minúsculas
+pt	N — 64 hexadecimal characters	N — 64 caracteres hexadecimais
+pt	New GsId	Criar GsId
+pt	new gsid gsid	new gsid gsid
+pt	Not Equal (GsId)	Diferente (GsId)
+pt	not equal gsid gsid	Não Igual gsid gsid
+pt	Out Gs Id	GsId gerado
+pt	Parse	Analisar
+pt	parse gsid	Analisar gsid
+pt	Result	Resultado
+pt	Stable Hash	Hash estável
+pt	Success	Sucesso
+pt	Text	Texto
+pt	To Bytes	Converter para bytes
+pt	to bytes gsid	to bytes gsid
+pt	To String	Converter para texto
+pt	to string gsid	to texto gsid
+pt	Try New GsId	Tentar criar um GsId
+pt	try new gsid gsid	tentar criar um gsid
+pt	Uppercase	Maiúsculas
+pt	Value	valor
+ru	A	A
+ru	B	B
+ru	Bytes	байты
+ru	Create Deterministic GsId	Создать детерминированный GsId
+ru	create deterministic gsid gsid	Создать детерминированный gsid gsid
+ru	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+ru	Empty GsId	Пустой GsId
+ru	empty gsid gsid	Пустой gsid gsid
+ru	Equal (GsId)	Равно (GsId)
+ru	equal gsid gsid	Равно gsid gsid
+ru	Format	формат
+ru	From Bytes	Создать из байтов
+ru	from bytes gsid	from байты gsid
+ru	Get Stable Hash	Получить стабильный хэш
+ru	get stable hash gsid	Получить стабильный хэш gsid
+ru	GSID	GSID
+ru	GsId	GsId
+ru	GsId Blueprint Library	Библиотека Blueprint GsId
+ru	GsId Format	Формат GsId
+ru	GsId Letter Case	Регистр GsId
+ru	Input Bytes	Входные байты
+ru	Is Empty	Пустой
+ru	is empty gsid	Является Пустой gsid
+ru	Is Valid	Допустимый
+ru	is valid gsid	Является Допустимый gsid
+ru	Less (GsId)	Меньше (GsId)
+ru	less gsid gsid	Меньше gsid gsid
+ru	Letter Case	Регистр
+ru	Lowercase	Нижний регистр
+ru	N — 64 hexadecimal characters	N — 64 шестнадцатеричных символа
+ru	New GsId	Создать GsId
+ru	new gsid gsid	new gsid gsid
+ru	Not Equal (GsId)	Не равно (GsId)
+ru	not equal gsid gsid	Не Равно gsid gsid
+ru	Out Gs Id	Созданный GsId
+ru	Parse	Разобрать
+ru	parse gsid	Разобрать gsid
+ru	Result	Результат
+ru	Stable Hash	Стабильный хэш
+ru	Success	Успех
+ru	Text	Текст
+ru	To Bytes	Преобразовать в байты
+ru	to bytes gsid	to байты gsid
+ru	To String	Преобразовать в строку
+ru	to string gsid	to строка gsid
+ru	Try New GsId	Попытаться создать GsId
+ru	try new gsid gsid	попытаться создать gsid
+ru	Uppercase	Верхний регистр
+ru	Value	значение
+tr	A	A
+tr	B	B
+tr	Bytes	Bayt
+tr	Create Deterministic GsId	Belirlenimci GsId Oluştur
+tr	create deterministic gsid gsid	Oluştur Belirlenimci gsid gsid
+tr	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+tr	Empty GsId	Boş GsId
+tr	empty gsid gsid	Boş gsid gsid
+tr	Equal (GsId)	Eşit (GsId)
+tr	equal gsid gsid	Eşit gsid gsid
+tr	Format	Biçim
+tr	From Bytes	Baytlardan Oluştur
+tr	from bytes gsid	from Bayt gsid
+tr	Get Stable Hash	Kararlı Karmayı Al
+tr	get stable hash gsid	Al Kararlı Karma gsid
+tr	GSID	GSID
+tr	GsId	GsId
+tr	GsId Blueprint Library	GsId Blueprint Kütüphanesi
+tr	GsId Format	GsId Biçimi
+tr	GsId Letter Case	GsId Harf Durumu
+tr	Input Bytes	Girdi Baytları
+tr	Is Empty	Boş mu
+tr	is empty gsid	Mi Boş gsid
+tr	Is Valid	Geçerli mi
+tr	is valid gsid	Mi Geçerli gsid
+tr	Less (GsId)	Küçük (GsId)
+tr	less gsid gsid	Küçük gsid gsid
+tr	Letter Case	Harf Durumu
+tr	Lowercase	Küçük Harf
+tr	N — 64 hexadecimal characters	N — 64 onaltılık karakter
+tr	New GsId	Yeni GsId
+tr	new gsid gsid	new gsid gsid
+tr	Not Equal (GsId)	Eşit Değil (GsId)
+tr	not equal gsid gsid	Değil Eşit gsid gsid
+tr	Out Gs Id	Oluşturulan GsId
+tr	Parse	Ayrıştır
+tr	parse gsid	Ayrıştır gsid
+tr	Result	Sonuç
+tr	Stable Hash	Kararlı Karma
+tr	Success	Başarı
+tr	Text	Metin
+tr	To Bytes	Baytlara Dönüştür
+tr	to bytes gsid	to Bayt gsid
+tr	To String	Dizeye Dönüştür
+tr	to string gsid	to Dize gsid
+tr	Try New GsId	GsId Oluşturmayı Dene
+tr	try new gsid gsid	gsid oluşturmayı dene
+tr	Uppercase	Büyük Harf
+tr	Value	Değer
+zh-Hans	A	A
+zh-Hans	B	B
+zh-Hans	Bytes	字节
+zh-Hans	Create Deterministic GsId	创建确定性 GsId
+zh-Hans	create deterministic gsid gsid	创建确定性 gsid gsid
+zh-Hans	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+zh-Hans	Empty GsId	空 GsId
+zh-Hans	empty gsid gsid	空 gsid gsid
+zh-Hans	Equal (GsId)	等于 (GsId)
+zh-Hans	equal gsid gsid	等于 gsid gsid
+zh-Hans	Format	格式
+zh-Hans	From Bytes	从字节创建
+zh-Hans	from bytes gsid	from 字节 gsid
+zh-Hans	Get Stable Hash	获取稳定哈希
+zh-Hans	get stable hash gsid	获取稳定哈希 gsid
+zh-Hans	GSID	GSID
+zh-Hans	GsId	GsId
+zh-Hans	GsId Blueprint Library	GsId 蓝图库
+zh-Hans	GsId Format	GsId 格式
+zh-Hans	GsId Letter Case	GsId 字母大小写
+zh-Hans	Input Bytes	输入字节
+zh-Hans	Is Empty	是否为空
+zh-Hans	is empty gsid	是否空 gsid
+zh-Hans	Is Valid	是否有效
+zh-Hans	is valid gsid	是否有效 gsid
+zh-Hans	Less (GsId)	小于 (GsId)
+zh-Hans	less gsid gsid	小于 gsid gsid
+zh-Hans	Letter Case	字母大小写
+zh-Hans	Lowercase	小写
+zh-Hans	N — 64 hexadecimal characters	N — 64 个十六进制字符
+zh-Hans	New GsId	新建 GsId
+zh-Hans	new gsid gsid	new gsid gsid
+zh-Hans	Not Equal (GsId)	不等于 (GsId)
+zh-Hans	not equal gsid gsid	非等于 gsid gsid
+zh-Hans	Out Gs Id	生成的 GsId
+zh-Hans	Parse	解析
+zh-Hans	parse gsid	解析 gsid
+zh-Hans	Result	结果
+zh-Hans	Stable Hash	稳定哈希
+zh-Hans	Success	成功
+zh-Hans	Text	文本
+zh-Hans	To Bytes	转换为字节
+zh-Hans	to bytes gsid	to 字节 gsid
+zh-Hans	To String	转换为字符串
+zh-Hans	to string gsid	to 字符串 gsid
+zh-Hans	Try New GsId	尝试创建 GsId
+zh-Hans	try new gsid gsid	尝试创建 gsid
+zh-Hans	Uppercase	大写
+zh-Hans	Value	值
+zh-Hant	A	A
+zh-Hant	B	B
+zh-Hant	Bytes	位元組
+zh-Hant	Create Deterministic GsId	建立確定性 GsId
+zh-Hant	create deterministic gsid gsid	建立確定性 gsid gsid
+zh-Hant	D — 16-8-8-8-8-16	D — 16 - 8 - 8 - 8 - 8 - 16
+zh-Hant	Empty GsId	空白 GsId
+zh-Hant	empty gsid gsid	空白 gsid gsid
+zh-Hant	Equal (GsId)	等於 (GsId)
+zh-Hant	equal gsid gsid	等於 gsid gsid
+zh-Hant	Format	格式
+zh-Hant	From Bytes	從位元組建立
+zh-Hant	from bytes gsid	from 位元組 gsid
+zh-Hant	Get Stable Hash	取得穩定雜湊
+zh-Hant	get stable hash gsid	取得穩定雜湊 gsid
+zh-Hant	GSID	GSID
+zh-Hant	GsId	GsId
+zh-Hant	GsId Blueprint Library	GsId 藍圖程式庫
+zh-Hant	GsId Format	GsId 格式
+zh-Hant	GsId Letter Case	GsId 字母大小寫
+zh-Hant	Input Bytes	輸入位元組
+zh-Hant	Is Empty	是否為空
+zh-Hant	is empty gsid	是否空白 gsid
+zh-Hant	Is Valid	是否有效
+zh-Hant	is valid gsid	是否有效 gsid
+zh-Hant	Less (GsId)	小於 (GsId)
+zh-Hant	less gsid gsid	小於 gsid gsid
+zh-Hant	Letter Case	字母大小寫
+zh-Hant	Lowercase	小寫
+zh-Hant	N — 64 hexadecimal characters	N — 64 個十六進位字元
+zh-Hant	New GsId	新增 GsId
+zh-Hant	new gsid gsid	new gsid gsid
+zh-Hant	Not Equal (GsId)	不等於 (GsId)
+zh-Hant	not equal gsid gsid	非等於 gsid gsid
+zh-Hant	Out Gs Id	產生的 GsId
+zh-Hant	Parse	剖析
+zh-Hant	parse gsid	剖析 gsid
+zh-Hant	Result	結果
+zh-Hant	Stable Hash	穩定雜湊
+zh-Hant	Success	成功
+zh-Hant	Text	文字
+zh-Hant	To Bytes	轉換為位元組
+zh-Hant	to bytes gsid	to 位元組 gsid
+zh-Hant	To String	轉換為字串
+zh-Hant	to string gsid	to 字串 gsid
+zh-Hant	Try New GsId	嘗試建立 GsId
+zh-Hant	try new gsid gsid	嘗試建立 gsid
+zh-Hant	Uppercase	大寫
+zh-Hant	Value	值
