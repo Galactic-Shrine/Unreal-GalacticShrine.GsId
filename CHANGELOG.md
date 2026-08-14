@@ -6,6 +6,15 @@ All notable changes to `GsId` for Unreal Engine are documented in this file.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/).
 
+## [1.0.1] — 2026-08-14
+
+### Fixed
+
+- completed all GsId Editor translations across the 13 supported cultures;
+- restored English as the native source culture for localization keys;
+- forced localization commandlets to run with the English culture, preventing translated editor text from being gathered as source text;
+- regenerated and compiled the localization archives and resources with no missing or review entries.
+
 ## [1.0.0] — Initial release
 
 ### Added
@@ -23,4 +32,5 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - automation tests and cross-platform localization and release scripts;
 - MIT licensing for the public GitHub source and releases, with a separate Fab Standard licensed package for Fab.
 
+[1.0.1]: https://github.com/Galactic-Shrine/Unreal-GalacticShrine.GsId/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Galactic-Shrine/Unreal-GalacticShrine.GsId/releases/tag/v1.0.0

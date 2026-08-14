@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
-  "Version": 1,
-  "VersionName": "1.0.0",
+  "Version": 2,
+  "VersionName": "1.0.1",
   "FriendlyName": "GsId",
   "Description": "256-bit Galactic-Shrine identifiers, Blueprint, text/binary serialization, replication, deterministic generation.",
   "Category": "Galactic-Shrine",

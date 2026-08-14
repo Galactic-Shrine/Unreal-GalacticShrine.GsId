@@ -2,7 +2,7 @@
 
 **Langues :** **Français** · [English](./README.en.md) · [Español](./README.es.md) · [Italiano](./README.it.md) · [日本語](./README.jp.md)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-4c9aff)](https://github.com/Galactic-Shrine/Unreal-GalacticShrine.GsId/releases)
+[![Version](https://img.shields.io/badge/version-1.0.1-4c9aff)](https://github.com/Galactic-Shrine/Unreal-GalacticShrine.GsId/releases)
 [![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.8-0e1128?logo=unrealengine)](https://www.unrealengine.com/)
 [![Licence](https://img.shields.io/badge/licence-MIT-blue)](./LICENSE)
 [![Plateformes](https://img.shields.io/badge/plateformes-Windows%20%7C%20Linux%20%7C%20macOS-6c757d)](#compatibilité)
@@ -14,7 +14,7 @@
 | Élément | Valeur |
 | --- | --- |
 | Plugin | `GsId` |
-| Version | `1.0.0` |
+| Version | `1.0.1` |
 | Moteur cible | Unreal Engine `5.8` |
 | Module Runtime | `GsId` |
 | Module Editor | `GsIdEditor` |
