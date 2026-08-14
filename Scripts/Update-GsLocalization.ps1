@@ -31,7 +31,7 @@ foreach ($CurrentTarget in $Targets) {
         $Content = $Content.Replace('__GS_PLUGIN_ROOT__', $NormalizedPluginRoot)
         [System.IO.File]::WriteAllText($TemporaryConfig, $Content, [System.Text.UTF8Encoding]::new($false))
         Write-Host "[GsId] Localization: $CurrentTarget / $CurrentAction"
-        & $EditorCmd $ProjectFile '-run=GatherText' "-config=$TemporaryConfig" '-unattended' '-nop4'
+        & $EditorCmd $ProjectFile '-run=GatherText' "-config=$TemporaryConfig" '-culture=en' '-unattended' '-nop4'
         if ($LASTEXITCODE -ne 0) { throw "Le commandlet de localisation a échoué avec le code $LASTEXITCODE." }
     }
 }

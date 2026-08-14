@@ -39,7 +39,7 @@ msgstr "成功"
 #: Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(106)
 msgctxt "GsIdEditorLocalization,Parameter_UGsIdBlueprintLibrary_TryNewGsId_OutGsId_DisplayName"
 msgid "Generated GsId"
-msgstr ""
+msgstr "生成的 GsId"
 
 #. Key:	Function_UGsIdBlueprintLibrary_EmptyGsId_DisplayName
 #. SourceLocation:	Plugins/GsId/Source/GsIdEditor/Private/Localization/GsIdEditorLocalizedMetadata.cpp(110)
